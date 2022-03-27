@@ -18,7 +18,7 @@ window.addEventListener("scroll", () => {
   let page3TextPosition = page3TextShow.getBoundingClientRect().top;
   let page4TextPosition = page4TextShow.getBoundingClientRect().top;
 
-  let objectOnScreenPosition = window.innerHeight / 1.5;
+  let objectOnScreenPosition = window.innerHeight / 2.5;
 
   if (page2TextPosition < objectOnScreenPosition) {
     page2TextShow.classList.add("page_2_text_show");

@@ -8,7 +8,8 @@ $fontLight: rgb(224, 224, 224);
 $fontLinkHover: rgb(226, 28, 28);
 
 body {
-    background-image: linear-gradient(to right, rgb(34, 51, 85), rgb(4, 21, 34));
+    /* background-image: linear-gradient(to right, rgb(34, 51, 85), rgb(4, 21, 34)); */
+    background-image: linear-gradient(to right, rgb(64, 88, 136),rgb(0, 65, 61));
     font-family: 'Roboto', sans-serif;
     color: $fontLight;
     overflow-x: hidden;
@@ -21,7 +22,8 @@ body {
 nav {
 
     position: fixed;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 85, 138));
+/*     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 85, 138)); */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(206, 52, 13));
     right: 0;
     width: 700px;
     transform: translateX(700px);
@@ -221,6 +223,8 @@ nav {
 #page_2_slideshow img {
     width: 180%;
 }
+
+/* ------------------------------------------------ */
 
 //PAGE 3
 

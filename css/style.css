@@ -6,8 +6,9 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right top, from(#223355), to(#041522));
-  background-image: linear-gradient(to right, #223355, #041522);
+  /* background-image: linear-gradient(to right, rgb(34, 51, 85), rgb(4, 21, 34)); */
+  background-image: -webkit-gradient(linear, left top, right top, from(#405888), to(#00413d));
+  background-image: linear-gradient(to right, #405888, #00413d);
   font-family: 'Roboto', sans-serif;
   color: #e0e0e0;
   overflow-x: hidden;
@@ -20,8 +21,9 @@ body {
 
 nav {
   position: fixed;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#10558a));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #10558a);
+  /*     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 85, 138)); */
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#ce340d));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ce340d);
   right: 0;
   width: 700px;
   -webkit-transform: translateX(700px);
@@ -280,6 +282,7 @@ nav a:hover {
   width: 180%;
 }
 
+/* ------------------------------------------------ */
 .page_3 {
   height: 100vh;
   max-height: 100vh;
