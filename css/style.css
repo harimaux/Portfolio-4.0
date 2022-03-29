@@ -233,6 +233,9 @@ nav a:hover {
 .page_2 {
   height: 100vh;
   max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .page_2_text {
@@ -254,6 +257,45 @@ nav a:hover {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.page_2_digits_animation {
+  padding-top: 6rem;
+  padding-right: 6rem;
+  color: #be1010;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.page_2_digits_animation_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.page2digits_square {
+  height: 20px;
+  width: 10px;
+  background-color: aliceblue;
+  opacity: 0;
+  -webkit-animation: page2digits_square_animation 1s ease-in-out infinite;
+          animation: page2digits_square_animation 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes page2digits_square_animation {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes page2digits_square_animation {
+  100% {
+    opacity: 1;
+  }
 }
 
 .page_2_img img {

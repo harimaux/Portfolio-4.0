@@ -178,6 +178,7 @@ nav {
 .page_2 {
     height: 100vh;
     max-height: 100vh;
+    display: flex;
 }
 
 .page_2_text {
@@ -196,6 +197,33 @@ nav {
 .page_2_text_show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.page_2_digits_animation {
+    padding-top: 6rem;
+    padding-right: 6rem;
+    color: rgb(190, 16, 16);
+    transition: 1s ease-in;
+}
+
+.page_2_digits_animation_container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.page2digits_square {
+    height: 20px;
+    width: 10px;
+    background-color: aliceblue;
+    opacity: 0;
+    animation: page2digits_square_animation 1s ease-in-out infinite;
+}
+
+@keyframes page2digits_square_animation {
+    100% {
+        opacity: 1;
+    }
 }
 
 .page_2_img img {

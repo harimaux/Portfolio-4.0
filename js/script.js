@@ -49,6 +49,10 @@ const techLogos = [
 
 let page1Canvas = document.querySelector(".page_1_animation_canvas");
 let page1CanvasImgDiv = document.getElementById("page_1_animation_logo");
+
+let page1Canvas2 = document.querySelector(".page_1_animation_canvas2");
+let page1CanvasImgDiv2 = document.getElementById("page_1_animation_logo2");
+
 setInterval(page1RandomLogo, 800);
 
 function page1RandomLogo() {
@@ -68,13 +72,7 @@ function page1RandomLogo() {
   if (countDivs == 6) {
     page1CanvasImgDiv.removeChild(page1CanvasImgDiv.firstChild);
   }
-}
 
-let page1Canvas2 = document.querySelector(".page_1_animation_canvas2");
-let page1CanvasImgDiv2 = document.getElementById("page_1_animation_logo2");
-setInterval(page1RandomLogo2, 800);
-
-function page1RandomLogo2() {
   randomTechLogo2 = Math.floor(Math.random() * techLogos.length);
   randomPointAtCanvas2 = Math.floor(Math.random() * page1Canvas2.clientWidth);
 
@@ -97,7 +95,7 @@ function page1RandomLogo2() {
 
 //Slideshow
 
-$("#page_2_slideshow > div:gt(0)").hide();
+/* $("#page_2_slideshow > div:gt(0)").hide();
 
 setInterval(function () {
   $("#page_2_slideshow > div:first")
@@ -106,4 +104,42 @@ setInterval(function () {
     .fadeIn(1500)
     .end()
     .appendTo("#page_2_slideshow");
-}, 4000);
+}, 4000); */
+
+let page2Digits = document.getElementById("page_2_digits_animation");
+let page2counter = 0;
+let page2counterTotal = 0;
+
+let digitTimer = setInterval(randomDigits, 10);
+
+function randomDigits() {
+  page2counter++;
+  page2counterTotal++;
+
+  let randomNumber = Math.floor(Math.random() * 2);
+
+  page2Digits.innerHTML += `${randomNumber}`;
+
+  if (page2counter == 50) {
+    page2Digits.innerHTML += `<br>`;
+    page2counter = 0;
+  }
+
+  if (page2counterTotal == 700) {
+    clearInterval(digitTimer);
+    let page2DigitsNewDiv = document.createElement("div");
+    page2DigitsNewDiv.classList.add("page2digits_square");
+    page2Digits.appendChild(page2DigitsNewDiv);
+
+    setTimeout(enlargeLetters, 1000);
+
+    function enlargeLetters() {
+      page2Digits.style.fontSize = "27px";
+      clearTimeout(enlargeLetters);
+
+      setTimeout(deleteLetters, 1000);
+    }
+
+    function deleteLetters() {}
+  }
+}
