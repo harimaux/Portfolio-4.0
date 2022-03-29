@@ -9,6 +9,11 @@ function navSlider() {
 }
 
 //Scroll events
+
+//Page 2 - digits animation starter
+let digitTimer;
+let fired = 0;
+
 let page2TextShow = document.querySelector(".page_2_text");
 let page3TextShow = document.querySelector(".page_3_text");
 let page4TextShow = document.querySelector(".page_4_text");
@@ -22,6 +27,11 @@ window.addEventListener("scroll", () => {
 
   if (page2TextPosition < objectOnScreenPosition) {
     page2TextShow.classList.add("page_2_text_show");
+
+    fired++;
+    if (fired == 1) {
+      digitTimer = setInterval(randomDigits, 10);
+    }
   }
   if (page3TextPosition < objectOnScreenPosition) {
     page3TextShow.classList.add("page_3_text_show");
@@ -73,6 +83,8 @@ function page1RandomLogo() {
     page1CanvasImgDiv.removeChild(page1CanvasImgDiv.firstChild);
   }
 
+  //Same thing, different div and random numbers
+
   randomTechLogo2 = Math.floor(Math.random() * techLogos.length);
   randomPointAtCanvas2 = Math.floor(Math.random() * page1Canvas2.clientWidth);
 
@@ -110,8 +122,6 @@ let page2Digits = document.getElementById("page_2_digits_animation");
 let page2counter = 0;
 let page2counterTotal = 0;
 
-let digitTimer = setInterval(randomDigits, 10);
-
 function randomDigits() {
   page2counter++;
   page2counterTotal++;
@@ -136,10 +146,6 @@ function randomDigits() {
     function enlargeLetters() {
       page2Digits.style.fontSize = "27px";
       clearTimeout(enlargeLetters);
-
-      setTimeout(deleteLetters, 1000);
     }
-
-    function deleteLetters() {}
   }
 }
