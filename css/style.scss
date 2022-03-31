@@ -1,15 +1,20 @@
-* {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$fontLight: rgb(224, 224, 224);
-$fontLinkHover: rgb(226, 28, 28);
+/* $fontLight: rgb(224, 224, 224); */
+$fontLight: rgb(226, 218, 218);
+/* $fontLinkHover: rgb(226, 28, 28); */
+$fontLinkHover: rgb(26, 25, 25);
 
 body {
     /* background-image: linear-gradient(to right, rgb(34, 51, 85), rgb(4, 21, 34)); */
-    background-image: linear-gradient(to right, rgb(64, 88, 136),rgb(0, 65, 61));
+    /* background-image: linear-gradient(to right, rgb(64, 88, 136),rgb(0, 65, 61)); */
+    background-image: linear-gradient(to right, rgb(116, 116, 116),rgb(15, 80, 141));
     font-family: 'Roboto', sans-serif;
     color: $fontLight;
     overflow-x: hidden;
@@ -22,7 +27,8 @@ body {
 nav {
 
     position: fixed;
-/*     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 85, 138)); */
+    /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(16, 85, 138)); */
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(206, 52, 13)); */
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(206, 52, 13));
     right: 0;
     width: 700px;
@@ -92,6 +98,8 @@ nav {
     z-index: -10;
 }
 
+/* ----------------- Canvas 1 ------------------------ */
+
 .page_1_animation_canvas {
     position: absolute;
     top: 40%;
@@ -109,7 +117,7 @@ nav {
 @keyframes page_1_animate_logo {
     0% {
         opacity: 0;
-        transform: translateY(300px);
+        transform: translateY(300px) rotatey(0deg);
     }
 
     25% {
@@ -122,11 +130,11 @@ nav {
 
     100% {
         opacity: 0;
-        transform: translateX(300px);
+        transform: translateX(300px) rotateY(1080deg);
     }
 }
 
-/* -----------------            ------------------------ */
+/* ----------------- Canvas 2 ------------------------ */
 
 .page_1_animation_canvas2 {
     position: absolute;
@@ -145,7 +153,7 @@ nav {
 @keyframes page_1_animate_logo2 {
     0% {
         opacity: 0;
-        transform: translateY(300px);
+        transform: translateY(300px) rotateY(0deg);
     }
 
     25% {
@@ -158,11 +166,11 @@ nav {
 
     100% {
         opacity: 0;
-        transform: translateX(-300px);
+        transform: translateX(-300px) rotateY(1080deg);
     }
 }
 
-/* -----------------            ------------------------ */
+/* ----------------- End of canvas ------------------------ */
 
 .page_1_background {
     position: absolute;
@@ -212,6 +220,14 @@ nav {
     justify-content: end;
 }
 
+.glow {
+    text-shadow:
+    /* White glow */
+    0 0 7px red,
+    0 0 10px red,
+    0 0 21px red,
+}
+
 .page2digits_square {
     height: 20px;
     width: 10px;
@@ -232,27 +248,6 @@ nav {
     height: 100vh;
     z-index: -10;
 }
-
-.page_2_slideshow_box {
-    position: absolute;
-    right: 500px;
-    width: 30%;
-    z-index: -10;
-}
-
-#page_2_slideshow {
-    position: relative;
-}
-
-#page_2_slideshow div {
-    position: absolute;
-}
-
-#page_2_slideshow img {
-    width: 180%;
-}
-
-/* ------------------------------------------------ */
 
 //PAGE 3
 
@@ -278,6 +273,54 @@ nav {
     opacity: 1;
     transform: translateY(0);
 }
+
+.page_3_card_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-self: center;
+    justify-content: center;
+}
+
+.page_3_card {
+    margin: 0.5rem;
+    transition: 0.5s ease-in-out;
+    border: solid 1px $fontLight;
+
+    h1 {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.page_3_card_brightness {
+    filter: brightness(0.2);
+}
+
+.card_3_background {
+    background-image: url('vinyl.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+/* .page_3_list {
+
+    padding-top: 2rem;
+
+    li {
+       line-height: 2em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fontLight;
+    }
+
+    a:hover {
+        color: $fontLinkHover;
+    }
+} */
+
 
 //PAGE 4
 

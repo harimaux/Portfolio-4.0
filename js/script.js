@@ -1,4 +1,4 @@
-// Displays navigation menu
+/* ---------------------- Displays Navigation Menu ---------------------- */
 let nav = document.querySelector("nav");
 
 setTimeout(navSlider, 800);
@@ -8,12 +8,13 @@ function navSlider() {
   clearTimeout();
 }
 
-//Scroll events
+/* ---------------------- Scroll Events ---------------------- */
 
 //Page 2 - digits animation starter
 let digitTimer;
 let fired = 0;
 
+//Pages Headings
 let page2TextShow = document.querySelector(".page_2_text");
 let page3TextShow = document.querySelector(".page_3_text");
 let page4TextShow = document.querySelector(".page_4_text");
@@ -28,9 +29,10 @@ window.addEventListener("scroll", () => {
   if (page2TextPosition < objectOnScreenPosition) {
     page2TextShow.classList.add("page_2_text_show");
 
+    //Runs animation function only once
     fired++;
     if (fired == 1) {
-      digitTimer = setInterval(randomDigits, 10);
+      digitTimer = setInterval(randomDigits, 5);
     }
   }
   if (page3TextPosition < objectOnScreenPosition) {
@@ -41,7 +43,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//Page 1 animation images
+/* ---------------------- Page 1 ---------------------- */
 
 const techLogos = [
   "bootstrap_logo.png",
@@ -103,20 +105,7 @@ function page1RandomLogo() {
   }
 }
 
-//Page 2
-
-//Slideshow
-
-/* $("#page_2_slideshow > div:gt(0)").hide();
-
-setInterval(function () {
-  $("#page_2_slideshow > div:first")
-    .fadeOut(1500)
-    .next()
-    .fadeIn(1500)
-    .end()
-    .appendTo("#page_2_slideshow");
-}, 4000); */
+/* ---------------------- Page 2 ---------------------- */
 
 let page2Digits = document.getElementById("page_2_digits_animation");
 let page2counter = 0;
@@ -141,11 +130,29 @@ function randomDigits() {
     page2DigitsNewDiv.classList.add("page2digits_square");
     page2Digits.appendChild(page2DigitsNewDiv);
 
-    setTimeout(enlargeLetters, 1000);
+    setTimeout(enlargeLetters, 1600);
 
     function enlargeLetters() {
       page2Digits.style.fontSize = "27px";
+      page2Digits.classList.add("glow");
+
       clearTimeout(enlargeLetters);
     }
   }
 }
+
+/* ---------------------- Page 3 ---------------------- */
+
+const cardsArray = [
+  "vinyl.jpg",
+  "scienceLab.jpg",
+  "harris.jpg",
+  "starwars.jpg",
+  "pong.jpg",
+  "todo.jpg",
+  "topview.jpg",
+  "textgame.jpg",
+  "bkb.jpg",
+];
+
+/* ---------------------- Page 4 ---------------------- */
