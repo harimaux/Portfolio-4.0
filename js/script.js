@@ -144,15 +144,21 @@ function randomDigits() {
 /* ---------------------- Page 3 ---------------------- */
 
 const cardsArray = [
-  "vinyl.jpg",
-  "scienceLab.jpg",
-  "harris.jpg",
-  "starwars.jpg",
-  "pong.jpg",
-  "todo.jpg",
-  "topview.jpg",
-  "textgame.jpg",
-  "bkb.jpg",
+  "images/page_3/vinyl.jpg",
+  "images/page_3/scienceLab.jpg",
+  "images/page_3/harris.jpg",
+  "images/page_3/starwars.jpg",
+  "images/page_3/pong.jpg",
+  "images/page_3/todo.jpg",
+  "images/page_3/topview.jpg",
+  "images/page_3/textgame.jpg",
+  "images/page_3/bkb.jpg",
 ];
 
-/* ---------------------- Page 4 ---------------------- */
+const page3CardsContainer = document.querySelector(".page_3_card_container");
+
+cardsArray.forEach(addCards);
+
+function addCards(card) {
+  page3CardsContainer.innerHTML += `<div class="page_3_card" style="background-image: url('${card}')"></div>`;
+}
