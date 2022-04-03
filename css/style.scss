@@ -21,6 +21,17 @@ body {
     overflow-x: hidden;
 }
 
+.main_background  {
+    position: fixed;
+    width: 100%;
+    z-index: -20;
+    opacity: 0.7;
+
+    img {
+        width: 100%;
+    }
+}
+
 .nav_slider {
     transform: translateX(0px);
 }
@@ -37,6 +48,7 @@ nav {
     transition: 1s ease-in-out;
     display: flex;
     align-items: center;
+    z-index: 10;
 
     ul {
         display: flex;
@@ -255,6 +267,10 @@ nav {
 .page_3 {
     height: 100vh;
     max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .page_3_text {
@@ -264,6 +280,9 @@ nav {
     opacity: 0;
     transform: translateY(40px);
     transition: 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     p {
         line-height: 25px;
@@ -279,14 +298,15 @@ nav {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-auto-rows: minmax(min-content, max-content);
-    align-self: center;
     justify-content: center;
 }
 
 .page_3_card {
 
-    width: 400px;
-    height: 250px;
+/*     width: 400px;
+    height: 250px; */
+    width: 350px;
+    height: 200px;
     border: solid 1px $fontLight;
     margin: 0.5rem;
     border-radius: 5px;
@@ -295,8 +315,8 @@ nav {
 
     img {
         border-radius: 5px;
-        width: 398px;
-        height: 248px;
+        width: 348px;
+        height: 198px;
         position: absolute;
         z-index: -5;
         transition: 0.5s ease;
@@ -304,10 +324,12 @@ nav {
 
     h2 {
         margin: 1rem;
+        font-size: 15px;
     }
 
     p {
         margin: 1rem;
+        font-size: small;
     }
 
     a {
@@ -319,11 +341,13 @@ nav {
         border-radius: 5px;
         position: absolute;
         bottom: 0;
+        right: 0;
+        font-size: smaller;
     }
 }
 
 .page_3_card:hover img {
-    filter: brightness(0.1) grayscale(0.1);
+    filter: brightness(0.1);
 }
 
 .page_3_cards_info {
@@ -342,8 +366,8 @@ nav {
 
     img {
         position: unset;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -376,7 +400,30 @@ nav {
     position: absolute;
     height: 80%;
     right: 0;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(180px);
     z-index: -20;
     opacity: 0.1;
+}
+
+.page_4_contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+
+    a {
+        color: $fontLight;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin: 0.5rem;
+    }
+
+    a:hover {
+        color: $fontLinkHover;
+    }
+
+    img {
+        margin-right: 0.5rem;
+        width: 50px;
+    }
 }
