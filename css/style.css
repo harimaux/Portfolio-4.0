@@ -12,8 +12,9 @@
 body {
   /* background-image: linear-gradient(to right, rgb(34, 51, 85), rgb(4, 21, 34)); */
   /* background-image: linear-gradient(to right, rgb(64, 88, 136),rgb(0, 65, 61)); */
-  background-image: -webkit-gradient(linear, left top, right top, from(#747474), to(#0f508d));
-  background-image: linear-gradient(to right, #747474, #0f508d);
+  /* background-image: linear-gradient(to right, rgb(116, 116, 116),rgb(15, 80, 141)); */
+  background-image: -webkit-gradient(linear, left top, right top, from(#5e5c5c), to(#0c467c));
+  background-image: linear-gradient(to right, #5e5c5c, #0c467c);
   font-family: 'Roboto', sans-serif;
   color: #e2dada;
   overflow-x: hidden;
@@ -359,6 +360,69 @@ nav a:hover {
 .page_3_card {
   width: 400px;
   height: 250px;
+  border: solid 1px #e2dada;
+  margin: 0.5rem;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+.page_3_card img {
+  border-radius: 5px;
+  width: 398px;
+  height: 248px;
+  position: absolute;
+  z-index: -5;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.page_3_card h2 {
+  margin: 1rem;
+}
+
+.page_3_card p {
+  margin: 1rem;
+}
+
+.page_3_card a {
+  border: solid 1px red;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: #e2dada;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+.page_3_card:hover img {
+  -webkit-filter: brightness(0.1) grayscale(0.1);
+          filter: brightness(0.1) grayscale(0.1);
+}
+
+.page_3_cards_info {
+  opacity: 0;
+}
+
+.page_3_cards_info_show {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.page_3_technologies {
+  z-index: 10;
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+  margin-left: 1rem;
+}
+
+.page_3_technologies img {
+  position: unset;
+  width: 40px;
+  height: 40px;
 }
 
 .page_4 {
