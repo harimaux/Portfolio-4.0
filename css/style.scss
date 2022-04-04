@@ -298,10 +298,18 @@ nav {
 }
 
 .page_3_card_container {
+    opacity: 0;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-auto-rows: minmax(min-content, max-content);
     justify-content: center;
+    transition: 1s ease-in-out;
+    transform: translateY(40px);
+}
+
+.page_3_cards_show {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .page_3_card {

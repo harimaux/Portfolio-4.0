@@ -371,6 +371,7 @@ nav a:hover {
 }
 
 .page_3_card_container {
+  opacity: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -380,6 +381,16 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.page_3_cards_show {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .page_3_card {
