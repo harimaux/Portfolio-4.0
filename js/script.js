@@ -146,3 +146,23 @@ function randomDigits() {
 $(".page_3_card").hover(function () {
   $(this).find(".page_3_cards_info").toggleClass("page_3_cards_info_show");
 });
+
+/* ---------------------- Page 4 ---------------------- */
+
+const page4Canvas = document.querySelector(".page_4_canvas");
+setInterval(page4Digits, 100);
+
+function page4Digits() {
+  const newDigit = document.createElement("div");
+  let randomNumber = Math.floor(Math.random() * 2);
+  let randomPosition = Math.floor(Math.random() * page4Canvas.clientWidth);
+  newDigit.setAttribute("class", "page_4_digit");
+  newDigit.style = `margin-left: ${randomPosition}px`;
+  newDigit.innerHTML = `${randomNumber}`;
+  page4Canvas.appendChild(newDigit);
+
+  let countCreatedDivs = page4Canvas.getElementsByTagName("div").length;
+  if (countCreatedDivs > 50) {
+    page4Canvas.removeChild(page4Canvas.firstChild);
+  }
+}
